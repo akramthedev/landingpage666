@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+
+  
+  <link rel="icon" href="./iconLogo.png" type="image/x-icon">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Netwaciila</title>
+  <style>
+    body {
+      margin: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 30px !important;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    body i{
+        color: white;
+        font-size: 13px !important;
+    }
+
+    h2 {
+
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 40px;
+      background: linear-gradient(to right, #ab4999,#ab4999, #6d4c9e, #1ab6d2,#1ab6d2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        background-clip: text;
+        color: transparent;
+      font-family: "Libre Baskerville", serif;
+    }
+
+    .grid-container {
+      display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .tile {
+      position: relative;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border: 1px solid rgb(226, 226, 226);
+      display: flex;
+      align-items: flex-end;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tile:hover {
+      transform: scale(1.03);
+    }
+
+   .tile-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.5em;
+      font-family: Roboto;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      word-break: break-word;
+    }
+
+    .tile1 {
+      background-image: url('./eduos.png');
+    }
+
+    .tile2 {
+      background-image: url('./noobtek.png');
+    }
+
+    .tile3 {
+      background-image: url('./estetic.png');
+    }
+
+    .tile4 {
+      background-image: url('./smartplanning.png');
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .containerOfImage{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerOfImage img{
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+    }
+
+
+   
+
+
+ 
+  #page-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 9999;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    pointer-events: none;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+      <div id="page-overlay" class="overlay"></div>
+
+
+  <div class="containerOfImage">
+    <img src="./logo.png" alt="">
+  </div>
+
+    <br>
+  <h2>Plongez dans notre univers digital</h2>
+
+  <br> 
+
+  <div class="grid-container">
+    <a href="http://universiapulse-001-site43.qtempurl.com/eduos/#/" class="tile tile1" target="_blank">
+      <div class="tile-footer">Edumyos&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+    <a href="http://universiapulse-001-site43.qtempurl.com/noobtek/#/" class="tile tile2" target="_blank">
+      <div class="tile-footer">NoobTech&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+    <a href="http://universiapulse-001-site43.qtempurl.com/estetic/#/" class="tile tile3" target="_blank">
+      <div class="tile-footer">E-stetic&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+    <a href="http://universiapulse-001-site43.qtempurl.com/smartplanning/#/" class="tile tile4" target="_blank">
+      <div class="tile-footer">SmartPlanning&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></div>
+    </a>
+  </div>
+
+
+  <script>
+  window.addEventListener('load', () => {
+  const overlay = document.getElementById('page-overlay');
+  overlay.style.opacity = '0';
+  setTimeout(() => {
+    overlay.remove();
+    document.body.style.visibility = 'visible';
+    document.documentElement.style.overflow = 'auto';
+  }, 1300);
+});
+
+</script>
+
+
+</body>
+</html>
